@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
 
 @theme inline {
   --color-background: hsl(var(--background));
@@ -20,52 +21,53 @@
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
-  --radius: 0.625rem;
+  --radius: 0.2rem;
 }
 
-/* Light theme */
+/* ─── Arctic Day — Light ─────────────────────────────────────── */
 :root {
-  --background: 210 22% 96%;
-  --foreground: 222 28% 14%;
+  --background: 210 35% 95%;
+  --foreground: 215 40% 12%;
   --card: 0 0% 100%;
-  --card-foreground: 222 28% 14%;
+  --card-foreground: 215 40% 12%;
   --popover: 0 0% 100%;
-  --popover-foreground: 222 28% 14%;
-  --primary: 195 78% 36%;
+  --popover-foreground: 215 40% 12%;
+  --primary: 204 88% 37%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 210 18% 92%;
-  --secondary-foreground: 222 22% 22%;
-  --muted: 210 18% 93%;
-  --muted-foreground: 215 14% 48%;
-  --accent: 195 78% 36%;
+  --secondary: 210 25% 90%;
+  --secondary-foreground: 215 25% 20%;
+  --muted: 210 22% 88%;
+  --muted-foreground: 215 15% 43%;
+  --accent: 204 88% 37%;
   --accent-foreground: 0 0% 100%;
-  --destructive: 0 70% 50%;
+  --destructive: 0 68% 50%;
   --destructive-foreground: 0 0% 100%;
-  --border: 214 18% 88%;
+  --border: 210 25% 82%;
   --input: 0 0% 100%;
-  --ring: 195 78% 36%;
+  --ring: 204 88% 37%;
 }
 
+/* ─── Arctic Cipher — Dark (深海潜艇) ───────────────────────── */
 .dark {
-  --background: 224 42% 4%;
-  --foreground: 210 16% 90%;
-  --card: 222 34% 7%;
-  --card-foreground: 210 16% 90%;
-  --popover: 222 38% 6%;
-  --popover-foreground: 210 16% 90%;
-  --primary: 195 100% 50%;
-  --primary-foreground: 224 42% 4%;
-  --secondary: 218 26% 13%;
-  --secondary-foreground: 210 16% 90%;
-  --muted: 218 26% 10%;
-  --muted-foreground: 215 14% 44%;
-  --accent: 195 100% 50%;
-  --accent-foreground: 224 42% 4%;
-  --destructive: 0 68% 52%;
-  --destructive-foreground: 210 16% 90%;
-  --border: 217 24% 14%;
-  --input: 218 26% 8%;
-  --ring: 195 100% 50%;
+  --background: 218 48% 8%;
+  --foreground: 210 28% 86%;
+  --card: 218 44% 12%;
+  --card-foreground: 210 28% 86%;
+  --popover: 218 44% 12%;
+  --popover-foreground: 210 28% 86%;
+  --primary: 204 92% 70%;
+  --primary-foreground: 218 48% 8%;
+  --secondary: 218 40% 17%;
+  --secondary-foreground: 210 22% 68%;
+  --muted: 218 38% 14%;
+  --muted-foreground: 210 18% 52%;
+  --accent: 204 92% 70%;
+  --accent-foreground: 218 48% 8%;
+  --destructive: 0 65% 56%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 215 38% 22%;
+  --input: 218 45% 10%;
+  --ring: 204 92% 70%;
 }
 
 * {
@@ -75,62 +77,70 @@
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
-  font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei New",
-    "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  font-family: 'Oxanium', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei New',
+    'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Monospace for code, passwords, identifiers */
 code, pre, kbd, .font-mono {
-  font-family: "SF Mono", "Cascadia Code", "JetBrains Mono", "Consolas", "Monaco", monospace;
+  font-family: 'SF Mono', 'JetBrains Mono', 'Cascadia Code', 'Consolas', 'Monaco', monospace;
 }
 
-/* Focus rings */
 *:focus-visible {
-  outline: 1.5px solid hsl(195 78% 36% / 0.5);
+  outline: 1px solid hsl(var(--ring) / 0.55);
   outline-offset: 2px;
 }
 
-/* Text selection */
 ::selection {
-  background: hsl(195 78% 36% / 0.14);
-  color: hsl(195 78% 24%);
+  background: hsl(var(--primary) / 0.16);
+  color: hsl(var(--primary));
 }
 
 /* Scrollbar */
-::-webkit-scrollbar {
-  width: 4px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background: hsl(214 18% 80%);
+  background: hsl(var(--border));
   border-radius: 99px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(195 78% 50% / 0.45);
+  background: hsl(var(--primary) / 0.4);
 }
 
-/* Dot grid background */
-.bg-dot-grid {
+/* ─── Blueprint grid background ──────────────────────────────── */
+.bg-cipher-grid {
   background-image:
-    radial-gradient(ellipse 60% 50% at 50% 0%, hsl(195 78% 50% / 0.07) 0%, transparent 70%),
-    radial-gradient(circle, hsl(214 18% 78% / 0.5) 1px, transparent 1px);
-  background-size: 100% 100%, 22px 22px;
+    radial-gradient(ellipse 75% 45% at 50% -5%, hsl(var(--primary) / 0.08) 0%, transparent 60%),
+    linear-gradient(hsl(var(--primary) / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--primary) / 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
 }
 
-/* Animations */
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ─── Entry cards ─────────────────────────────────────────────── */
+.entry-card {
+  position: relative;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+.entry-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: hsl(var(--primary));
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+.entry-card:hover::before {
+  opacity: 0.7;
+}
+
+/* ─── Animations ──────────────────────────────────────────────── */
+@keyframes cipher-enter {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fade-in {
@@ -138,30 +148,27 @@ code, pre, kbd, .font-mono {
   to   { opacity: 1; }
 }
 
+@keyframes ring-rotate {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes glow-breathe {
+  0%, 100% { opacity: 0.2; }
+  50%       { opacity: 0.5; }
+}
+
 .animate-fade-up {
-  animation: fade-up 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: cipher-enter 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-fade-in {
-  animation: fade-in 0.2s ease-out forwards;
+  animation: fade-in 0.18s ease-out forwards;
 }
 
-/* Entry card hover accent line */
-.entry-card {
-  position: relative;
+.animate-ring-rotate {
+  animation: ring-rotate 16s linear infinite;
 }
-.entry-card::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 12px;
-  bottom: 12px;
-  width: 2px;
-  border-radius: 0 1px 1px 0;
-  background: hsl(195 78% 36%);
-  opacity: 0;
-  transition: opacity 0.15s ease;
-}
-.entry-card:hover::before {
-  opacity: 0.7;
+
+.animate-glow-breathe {
+  animation: glow-breathe 4s ease-in-out infinite;
 }

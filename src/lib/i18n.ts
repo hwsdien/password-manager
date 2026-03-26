@@ -34,6 +34,8 @@ const dict: Record<Lang, Record<string, string>> = {
     'vault.delete_confirm_msg': '此操作不可撤销。',
     'vault.hide_password': '隐藏密码',
     'vault.show_password': '显示密码',
+    'vault.prev_page': '上一页',
+    'vault.next_page': '下一页',
     // EntryForm
     'form.add_title': '添加密码',
     'form.edit_title': '编辑密码',
@@ -127,6 +129,8 @@ const dict: Record<Lang, Record<string, string>> = {
     'vault.delete_confirm_msg': 'This action cannot be undone.',
     'vault.hide_password': 'Hide password',
     'vault.show_password': 'Show password',
+    'vault.prev_page': 'Prev',
+    'vault.next_page': 'Next',
     'form.add_title': 'Add Password',
     'form.edit_title': 'Edit Password',
     'form.site': 'Site / App',
