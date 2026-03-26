@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --radius: 0.625rem;
+}
+
+/* Light theme */
+:root {
+  --background: 210 22% 96%;
+  --foreground: 222 28% 14%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 28% 14%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 28% 14%;
+  --primary: 195 78% 36%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 18% 92%;
+  --secondary-foreground: 222 22% 22%;
+  --muted: 210 18% 93%;
+  --muted-foreground: 215 14% 48%;
+  --accent: 195 78% 36%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 70% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214 18% 88%;
+  --input: 0 0% 100%;
+  --ring: 195 78% 36%;
+}
+
+.dark {
+  --background: 224 42% 4%;
+  --foreground: 210 16% 90%;
+  --card: 222 34% 7%;
+  --card-foreground: 210 16% 90%;
+  --popover: 222 38% 6%;
+  --popover-foreground: 210 16% 90%;
+  --primary: 195 100% 50%;
+  --primary-foreground: 224 42% 4%;
+  --secondary: 218 26% 13%;
+  --secondary-foreground: 210 16% 90%;
+  --muted: 218 26% 10%;
+  --muted-foreground: 215 14% 44%;
+  --accent: 195 100% 50%;
+  --accent-foreground: 224 42% 4%;
+  --destructive: 0 68% 52%;
+  --destructive-foreground: 210 16% 90%;
+  --border: 217 24% 14%;
+  --input: 218 26% 8%;
+  --ring: 195 100% 50%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei New",
+    "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Monospace for code, passwords, identifiers */
+code, pre, kbd, .font-mono {
+  font-family: "SF Mono", "Cascadia Code", "JetBrains Mono", "Consolas", "Monaco", monospace;
+}
+
+/* Focus rings */
+*:focus-visible {
+  outline: 1.5px solid hsl(195 78% 36% / 0.5);
+  outline-offset: 2px;
+}
+
+/* Text selection */
+::selection {
+  background: hsl(195 78% 36% / 0.14);
+  color: hsl(195 78% 24%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(214 18% 80%);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(195 78% 50% / 0.45);
+}
+
+/* Dot grid background */
+.bg-dot-grid {
+  background-image:
+    radial-gradient(ellipse 60% 50% at 50% 0%, hsl(195 78% 50% / 0.07) 0%, transparent 70%),
+    radial-gradient(circle, hsl(214 18% 78% / 0.5) 1px, transparent 1px);
+  background-size: 100% 100%, 22px 22px;
+}
+
+/* Animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out forwards;
+}
+
+/* Entry card hover accent line */
+.entry-card {
+  position: relative;
+}
+.entry-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  border-radius: 0 1px 1px 0;
+  background: hsl(195 78% 36%);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+.entry-card:hover::before {
+  opacity: 0.7;
+}
