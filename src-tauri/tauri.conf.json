@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "小红密码管理器",
-  "version": "0.1.0",
-  "identifier": "me.yhz.passwordmanager.app",
+  "version": "0.1.1",
+  "identifier": "me.yhz.passwordmanager",
   "build": {
     "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:1420",

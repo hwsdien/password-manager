@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D32F2F"/>
+      <stop offset="100%" stop-color="#B71C1C"/>
+    </linearGradient>
+    <linearGradient id="keyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ECEFF1"/>
+      <stop offset="30%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#FAFAFA"/>
+      <stop offset="100%" stop-color="#CFD8DC"/>
+    </linearGradient>
+    <linearGradient id="innerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C62828"/>
+      <stop offset="100%" stop-color="#8B0000"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#5D0000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="keyShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="32" y="32" width="448" height="448" rx="80" fill="url(#bgGrad)" filter="url(#shadow)"/>
+  <rect x="56" y="56" width="400" height="400" rx="64" fill="none" stroke="#FFCDD2" stroke-width="2" stroke-opacity="0.3"/>
+  <line x1="96" y1="96" x2="140" y2="96" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.3"/>
+  <line x1="96" y1="96" x2="96" y2="140" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.3"/>
+  <line x1="416" y1="96" x2="372" y2="96" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.3"/>
+  <line x1="416" y1="96" x2="416" y2="140" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.3"/>
+  <line x1="96" y1="416" x2="140" y2="416" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.3"/>
+  <line x1="96" y1="416" x2="96" y2="372" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.3"/>
+  <line x1="416" y1="416" x2="372" y2="416" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.3"/>
+  <line x1="416" y1="416" x2="416" y2="372" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.3"/>
+  <g transform="translate(256, 248) rotate(-45)" filter="url(#keyShadow)">
+    <rect x="-56" y="-104" width="112" height="112" rx="16" fill="url(#keyGrad)"/>
+    <rect x="-56" y="-104" width="112" height="112" rx="16" fill="none" stroke="#90A4AE" stroke-width="2"/>
+    <rect x="-24" y="-72" width="48" height="48" rx="8" fill="url(#innerGrad)"/>
+    <rect x="-18" y="-66" width="12" height="12" rx="2" fill="#FFFFFF" fill-opacity="0.35"/>
+    <rect x="-16" y="0" width="32" height="130" rx="4" fill="url(#keyGrad)"/>
+    <rect x="-16" y="0" width="32" height="130" rx="4" fill="none" stroke="#90A4AE" stroke-width="2"/>
+    <rect x="-10" y="8" width="8" height="110" rx="2" fill="#FFFFFF" fill-opacity="0.4"/>
+    <rect x="-48" y="52" width="36" height="22" rx="4" fill="url(#keyGrad)"/>
+    <rect x="-48" y="52" width="36" height="22" rx="4" fill="none" stroke="#90A4AE" stroke-width="2"/>
+    <rect x="-56" y="86" width="44" height="22" rx="4" fill="url(#keyGrad)"/>
+    <rect x="-56" y="86" width="44" height="22" rx="4" fill="none" stroke="#90A4AE" stroke-width="2"/>
+    <rect x="-48" y="118" width="36" height="18" rx="4" fill="url(#keyGrad)"/>
+    <rect x="-48" y="118" width="36" height="18" rx="4" fill="none" stroke="#90A4AE" stroke-width="2"/>
+  </g>
+  <g transform="translate(380, 140)">
+    <circle cx="0" cy="0" r="8" fill="#FFFFFF" fill-opacity="0.4"/>
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF" fill-opacity="0.6"/>
+  </g>
+  <g transform="translate(132, 372)">
+    <circle cx="0" cy="0" r="8" fill="#FFFFFF" fill-opacity="0.4"/>
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF" fill-opacity="0.6"/>
+  </g>
+</svg>
